@@ -1,0 +1,97 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+  img.netflix-logo {
+        display: block; 
+        margin: 0 auto;
+        height: 50px;
+        filter: drop-shadow(4px 4px black);
+        z-index: 3;
+    }
+
+h1.general-header {
+    @extend .general-header;
+}
+
+h6.movie-title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: map-get($colors, white);
+    font-weight: bold;
+}
+
+.general-header {    
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    font-weight: 900;
+}
+
+ion-grid.film-group {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    ion-row:first-child {
+        margin-bottom: 10px;
+
+        ion-col:first-child {
+            text-align: left;  
+            position: relative;          
+            
+            h1 {
+                @extend .general-header;
+                margin: 0;
+                position: absolute;
+                bottom: 0;   
+                left: 0;
+            }
+        }
+
+        ion-col:nth-child(2) {
+            text-align: right;
+            position: relative;
+
+            h5 {
+                margin: 0;
+                position: absolute;
+                bottom: 0;   
+                right: 0;
+                font-size: 1.5rem;
+                line-height: 3rem;
+                color: map-get($colors, extra-print)                      
+            }
+        }    
+
+    }
+
+    ion-row:nth-child(n+2) ion-col {
+        background-position: bottom center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 100%;
+    }
+
+    ion-row:nth-child(n+2) ion-col:first-child {
+        margin-right: 4px;
+    }
+   
+    ion-row:nth-child(n+2) ion-col:nth-child(2) {
+        margin-top: 8px;
+        margin-left: 4px;
+    }   
+    
+}

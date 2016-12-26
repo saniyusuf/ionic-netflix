@@ -1,0 +1,49 @@
+
+<ion-content [style.background-image]="'url(' + film.Preview + ')'">
+  <div class="overlay"></div>
+  <div class="close-icon" navPop></div>
+
+    <div class="film-details">
+      <div class="play-icon"></div>
+      <h6 class="movie-title">Film</h6>
+      <h1 class="general-header">{{film.Title}}</h1>
+
+      <ion-grid>
+        <ion-row>
+            <ion-col width-67 no-padding>
+              <h4 class="film-short-info">{{film.Year}} &middot; {{film.Runtime}} &middot; {{film.Rated}}</h4>
+              <rating [(ngModel)]="rating" readOnly="true"></rating>
+            </ion-col>
+            
+            <ion-col no-padding>
+              <ion-row  class="user-options">
+                <ion-col>
+                  <button ion-button icon-only clear color="white">
+                    <ion-icon name="add"></ion-icon>
+                  </button>
+                  <b>My List</b>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-only clear color="white" (click)=share()>
+                    <ion-icon name="share"></ion-icon>
+                  </button>
+                  <b>Share</b>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+        </ion-row>
+      </ion-grid>  
+
+      <p class="film-description"> 
+        {{film.Plot}}
+      </p>
+
+      <p class="film-cast">
+        Cast: {{film.Actors}}
+      </p>
+      <p class="film-cast">
+        Director: {{film.Director}}
+        </p>
+    </div>
+  
+</ion-content>

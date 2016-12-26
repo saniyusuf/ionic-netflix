@@ -1,0 +1,70 @@
+
+<ion-content padding>
+  <img class="netflix-logo" src="assets/netflix-logo.png">
+
+  <ion-slides class="film-slider" #filmSlider (ionWillChange)="sliderWillChange($event)">
+      <ion-slide *ngFor="let film of featuredFilms" [style.background-image]="'url(' + film.FeaturedImage + ')'">          
+        <ion-grid>
+          <ion-row>
+            <ion-col width-80>
+              <div>
+                <h6>Fantastic Beasts</h6>
+              </div>
+            </ion-col>
+            <ion-col width-20>
+              
+            </ion-col>
+          </ion-row>
+        </ion-grid>  
+
+        <img class="play-icon" src="assets/round-play.svg">
+      </ion-slide> 
+  </ion-slides>
+  
+    <div class="slider-pagination">
+      <svg height="15" width="15" *ngFor="let color of paginationColors">
+        <circle cx="7.5" cy="7.5" r="6" [style.fill]="color" />
+      </svg>      
+    </div>
+
+  <ion-grid class="film-group">
+      <ion-row>
+        <ion-col width-67>
+          <h1>Trending Now</h1>
+        </ion-col>
+        <ion-col>
+          <h5>See more</h5>
+        </ion-col>
+      </ion-row>
+
+    <ion-row *ngFor="let trendingRow of trending">
+      <ion-col 
+        (click)="openFilmDetailModal(trendingFilm.imdbID)"
+        width-50 *ngFor="let trendingFilm of trendingRow" 
+        [style.background-image]="'url(' + trendingFilm.Poster + ')'">
+      </ion-col>    
+    </ion-row>    
+  </ion-grid>
+
+  <ion-grid class="film-group" >
+      <ion-row>
+        <ion-col width-67>
+          <h1>Top Picks</h1>
+        </ion-col>
+        <ion-col>
+          <h5>See more</h5>
+        </ion-col>
+      </ion-row>
+
+    <ion-row *ngFor="let topPicRow of topPicks">
+      <ion-col 
+        (click)="openFilmDetailModal(topPicFilm.imdbID)"
+        width-50 
+        *ngFor="let topPicFilm of topPicRow" 
+        [style.background-image]="'url(' + topPicFilm.Poster + ')'">
+      </ion-col>      
+    </ion-row>
+
+  </ion-grid>
+  
+</ion-content>

@@ -1,0 +1,67 @@
+page-home {
+
+    div.slider-pagination {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+
+        svg {
+            margin: 6px;
+        }
+    }
+
+    ion-slides.film-slider {
+        height: 200px;
+
+        ion-slide {
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+
+            img.play-icon {
+                position: absolute;
+                bottom: 0;  
+                right: 0; 
+                margin: 8px;
+                width: 15%;
+                height: auto;
+            }
+
+            ion-grid{
+                background-color: rgba(0,0,0, 0.5); 
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;   
+                left: 0;    
+
+                ion-row{
+                    width: inherit;
+                    height: inherit; 
+
+                    ion-col:first-child {        
+                        text-align: left;
+                        position: relative;
+                        width: inherit;
+                        height: inherit;                  
+
+                        div {                                       
+                            h6 {     
+                                position: absolute;
+                                bottom: 0;                  
+                                font-weight: bold;
+                                font-size: 1.7rem;
+                                line-height: 2rem;  
+                                margin-bottom: 5px; 
+                            }
+                        }
+                    
+                    }       
+                }                                     
+            
+            }
+        }
+    }
+    
+}
