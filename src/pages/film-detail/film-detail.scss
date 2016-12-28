@@ -23,7 +23,7 @@ page-film-detail {
             left: 5vw;
             background-color: rgba(0,0,0, 0.5); 
             background-repeat: no-repeat;
-            background-size: 50% 50%;
+            background-size: 40% 40%;
             background-position: center center;
             border-radius: 50%;
         }
@@ -38,12 +38,10 @@ page-film-detail {
                 width: 20vw;
                 height: 20vw;
                 margin-left: 40vw;
-                border-radius: 50%;
-                background-image: url("../assets/round-play.svg");
+                background-image: url("../assets/play.svg");
                 background-size: 100% 100%;
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-color: rgba(0,0,0, 0.5); 
             }
 
             h1.general-header{
@@ -60,24 +58,25 @@ page-film-detail {
             ul {
                 padding: 0px;
                 margin-left: -8px;
+                margin-bottom: 2rem;
 
                 &.rating li {
-                    padding: 5px 10px;
                     background: none;
                     color: map-get($colors, netflix);
 
                     ion-icon {
-                        font-size: 26px;
+                        font-size: 20px;
                     }
                 }
             }
 
             ion-row.user-options {
-                margin-top: -1.2rem;
+                margin-top: -1rem;
 
                ion-col {
                     text-align: center;
                     font-size: 1.2rem;
+                    margin-top: 0.2rem;
 
                     button {
                         margin-bottom: -0.3rem;
@@ -86,19 +85,18 @@ page-film-detail {
             }
 
             p.film-description{
-                margin-top: -1.5rem;
+                margin-top: -1.25rem;
                 margin-bottom: 2rem;
-                font-size: 1.8rem;
-                line-height: 2rem;
+                font-size: 1.7rem;
+                line-height: 1.7rem;
                 color: map-get($colors, white);
                 font-weight: 500;
-                text-align: justify;
             }
             
             p.film-cast {
-                margin-top: -1.8rem;
-                font-size: 1.5rem;
-                line-height: 2rem;
+                margin-top: -1.25rem;
+                font-size: 1.35rem;
+                line-height: 1.7rem;
                 color: map-get($colors, small-print);
                 text-align: left;
             }

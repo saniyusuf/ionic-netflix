@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>PLAY ICON</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FILM-PAGE" transform="translate(-147.000000, -266.000000)">
+            <g id="PLAY-ICON" transform="translate(148.000000, 267.000000)">
+                <circle id="BG" stroke="#FFFFFF" stroke-width="2" fill-opacity="0.5" fill="#000000" cx="40" cy="40" r="40"></circle>
+                <path d="M55.8636231,37.8684454 L34.6338305,25.3806984 C33.8276904,24.8863807 32.9947269,24.873448 32.1363769,25.3419002 C31.3038923,25.8362178 30.8876501,26.5642825 30.8876501,27.5270523 L30.8876501,52.5030254 C30.8876501,53.4653162 31.3038923,54.1938599 32.1363769,54.6881775 C32.5526191,54.8960592 32.9688614,55 33.3851037,55 C33.8272114,55 34.2439327,54.8831265 34.6338305,54.6493794 L55.8636231,42.1616323 C56.6961077,41.6931802 57.1123499,40.9780482 57.1123499,40.0157573 C57.1123499,39.0534665 56.6951497,38.3368976 55.8636231,37.8684454 L55.8636231,37.8684454 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
