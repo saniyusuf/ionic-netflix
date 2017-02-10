@@ -2,29 +2,29 @@
 <ion-content padding>
   <img class="netflix-logo" src="assets/netflix-logo.png">
 
-  <ion-slides class="film-slider" #filmSlider (ionWillChange)="sliderWillChange($event)">
-      <ion-slide *ngFor="let film of featuredFilms" [style.background-image]="'url(' + film.FeaturedImage + ')'">          
+  <ion-slides class="film-slider" #filmSlider (ionSlideWillChange)="sliderWillChange($event)">
+      <ion-slide *ngFor="let film of featuredFilms" [style.background-image]="'url(' + film.FeaturedImage + ')'">
         <ion-grid>
           <ion-row>
             <ion-col width-80>
               <div>
-                <h6>Fantastic Beasts</h6>
+                <h6>{{film.Title}}</h6>
               </div>
             </ion-col>
             <ion-col width-20>
-              
+
             </ion-col>
           </ion-row>
-        </ion-grid>  
+        </ion-grid>
 
         <img class="play-icon" src="assets/play.svg">
-      </ion-slide> 
+      </ion-slide>
   </ion-slides>
-  
+
     <div class="slider-pagination">
       <svg height="15" width="15" *ngFor="let color of paginationColors">
         <circle cx="7.5" cy="7.5" r="6" [style.fill]="color" />
-      </svg>      
+      </svg>
     </div>
 
   <ion-grid class="film-group">
@@ -38,12 +38,12 @@
       </ion-row>
 
     <ion-row *ngFor="let trendingRow of trending">
-      <ion-col 
+      <ion-col
         (click)="openFilmDetailModal(trendingFilm.imdbID)"
-        width-50 *ngFor="let trendingFilm of trendingRow" 
+        width-50 *ngFor="let trendingFilm of trendingRow"
         [style.background-image]="'url(' + trendingFilm.Poster + ')'">
-      </ion-col>    
-    </ion-row>    
+      </ion-col>
+    </ion-row>
   </ion-grid>
 
   <ion-grid class="film-group" >
@@ -57,14 +57,14 @@
       </ion-row>
 
     <ion-row *ngFor="let topPicRow of topPicks">
-      <ion-col 
+      <ion-col
         (click)="openFilmDetailModal(topPicFilm.imdbID)"
-        width-50 
-        *ngFor="let topPicFilm of topPicRow" 
+        width-50
+        *ngFor="let topPicFilm of topPicRow"
         [style.background-image]="'url(' + topPicFilm.Poster + ')'">
-      </ion-col>      
+      </ion-col>
     </ion-row>
 
   </ion-grid>
-  
+
 </ion-content>
