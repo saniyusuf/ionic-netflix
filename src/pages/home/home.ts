@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Slides, ModalController } from 'ionic-angular';
 
 import { FilmDetailPage } from '../film-detail/film-detail';
-
 import { Film } from '../../providers/film';
+import { TranslateService } from 'ng2-translate';
+
 
 @Component({
   selector: 'page-home',
@@ -19,7 +19,7 @@ export class HomePage {
   private featuredFilms: Array<any>;
   public paginationColors: Array<any>;
 
-  constructor(private film: Film, private modalCtrl: ModalController) { }
+  constructor(private film: Film, private modalCtrl: ModalController, private translate: TranslateService) { }
 
   ionViewDidLoad(){
     this.film.getFilms()
@@ -103,6 +103,14 @@ export class HomePage {
       film: selectedFilm
     });
     filmDetailModal.present();
+  }
+
+  setDanish(){
+    this.translate.use('da');
+  }
+
+  setEnglish(){
+    this.translate.use('en');
   }
 
 }

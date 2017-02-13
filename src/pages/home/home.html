@@ -2,6 +2,18 @@
 <ion-content padding>
   <img class="netflix-logo" src="assets/netflix-logo.png">
 
+  <ion-fab top right>
+    <button ion-fab mini color="netflix"><ion-icon name="settings"></ion-icon></button>
+    <ion-fab-list>
+      <button clear ion-fab (click)="setDanish()">
+        <img src="assets/dk.svg">
+      </button>
+      <button clear ion-fab (click)="setEnglish()">
+        <img src="assets/uk.svg">
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
   <ion-slides class="film-slider" #filmSlider (ionSlideWillChange)="sliderWillChange($event)">
       <ion-slide *ngFor="let film of featuredFilms" [style.background-image]="'url(' + film.FeaturedImage + ')'">
         <ion-grid>
@@ -30,10 +42,10 @@
   <ion-grid class="film-group">
       <ion-row>
         <ion-col width-67>
-          <h1>Trending Now</h1>
+          <h1>{{'TREND' | translate}}</h1>
         </ion-col>
         <ion-col>
-          <h5>See more</h5>
+          <h5>{{'MORE' | translate}}</h5>
         </ion-col>
       </ion-row>
 
@@ -49,10 +61,10 @@
   <ion-grid class="film-group" >
       <ion-row>
         <ion-col width-67>
-          <h1>Top Picks</h1>
+          <h1>{{'TOP' | translate}}</h1>
         </ion-col>
         <ion-col>
-          <h5>See more</h5>
+          <h5>{{'MORE' | translate}}</h5>
         </ion-col>
       </ion-row>
 

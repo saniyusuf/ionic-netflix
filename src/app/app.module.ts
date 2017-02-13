@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { CloudModule, CloudSettings } from '@ionic/cloud-angular';
+// import { CloudModule, CloudSettings } from '@ionic/cloud-angular';
 
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
@@ -12,12 +12,14 @@ import { Film } from '../providers/film'
 
 import { FilmDetailPage } from '../pages/film-detail/film-detail';
 import { Ionic2RatingModule } from 'ionic2-rating';
+import { TranslateModule, TranslateStaticLoader, TranslateLoader } from 'ng2-translate/ng2-translate';
+import { Http } from '@angular/http';
 
-const cloudSettings: CloudSettings = {
-  'core': {
-    'app_id': '6dc8f9ab'
-  }
-};
+// const cloudSettings: CloudSettings = {
+//   'core': {
+//     'app_id': '6dc8f9ab'
+//   }
+// };
 
 
 @NgModule({
@@ -32,7 +34,11 @@ const cloudSettings: CloudSettings = {
   imports: [
     IonicModule.forRoot(MyApp),
     Ionic2RatingModule,
-    CloudModule.forRoot(cloudSettings)
+    TranslateModule.forRoot({
+    provide: TranslateLoader,
+    useFactory: (createTranslateLoader),
+    deps: [Http]
+  })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,3 +52,7 @@ const cloudSettings: CloudSettings = {
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Film]
 })
 export class AppModule {}
+
+export function createTranslateLoader(http: Http) {
+  return new TranslateStaticLoader(http, 'assets/i18n', '.json');
+}

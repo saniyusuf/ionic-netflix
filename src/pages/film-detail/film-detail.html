@@ -5,7 +5,7 @@
 
     <div class="film-details">
       <div class="play-icon"></div>
-      <h6 class="movie-title">Film</h6>
+      <h6 class="movie-title">{{'FILM' | translate}}</h6>
       <h1 class="general-header">{{film.Title}}</h1>
 
       <ion-grid>
@@ -21,13 +21,13 @@
                   <button ion-button icon-only clear color="white">
                     <ion-icon name="add"></ion-icon>
                   </button>
-                  <b>My List</b>
+                  <b>{{'MY_LIST' | translate}}</b>
                 </ion-col>
                 <ion-col>
                   <button ion-button icon-only clear color="white" (click)=share()>
                     <ion-icon name="share"></ion-icon>
                   </button>
-                  <b>Share</b>
+                  <b>{{'SHARE' | translate}}</b>
                 </ion-col>
               </ion-row>
             </ion-col>
@@ -39,10 +39,10 @@
       </p>
 
       <p class="film-cast">
-        Cast: {{film.Actors}}
+        {{'CAST' | translate}}: {{film.Actors}}
       </p>
       <p class="film-cast">
-        Director: {{film.Director}}
+        {{'DIRECTOR' | translate}}: {{film.Director}}
         </p>
     </div>
   
