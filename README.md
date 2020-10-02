@@ -1,4 +1,4 @@
-# Netflix & Chill App 
+# Netflix & Chill - An Amazing App
 Implementation Of A Netflix Design Done By @efosaSO
 
 This app was used as a demo for the 2017 edition of [NG-Vikings Confrence](http://ngvikings.org) . 
